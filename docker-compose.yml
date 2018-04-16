@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: dist/user-registration-application-0.0.1-SNAPSHOT.war:/usr/local/tomcat/webapps/
+    build: .
+    ports:
+     - "8000:80"
+  redis:
+    image: "tomcat:8-jre8"
